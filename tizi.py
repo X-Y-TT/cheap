@@ -89,6 +89,7 @@ def main2(invite):
     register2(email,invite)
     time.sleep(5)
     get_num(email)
+    return True
 
 if __name__ == "__main__":
     sele=input('请选择：1.新账号，2.邀请：\n')
