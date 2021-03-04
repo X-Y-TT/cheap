@@ -65,7 +65,7 @@ def register(email):
     Driver.find_element_by_xpath('/html/body/div[11]/div/div[4]/div/button').click()
     time.sleep(1)
     Driver.find_element_by_xpath('//*[@id="send-confirm-email"]').click()
-    ssr=driver.find_element_by_xpath('/ html / body / div[1] / div / div / div[4] / div / div / p / strong[1]').text
+    ssr=Driver.find_element_by_xpath('/ html / body / div[1] / div / div / div[4] / div / div / p / strong[1]').text
     print(ssr)
     time.sleep(5)
     return ssr
