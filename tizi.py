@@ -83,7 +83,7 @@ def main():
     ssr=register(email)
     time.sleep(5)
     get_num(email)
-
+    return ssr
 def main2(invite):
     email = get_email()
 
