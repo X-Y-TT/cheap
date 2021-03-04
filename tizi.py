@@ -47,7 +47,13 @@ def get_num(email):
 
 def register(email):
     global Driver
-    Driver = webdriver.Chrome()
+    chrome_opt = webdriver.ChromeOptions()
+    chrome_opt.add_argument('--headless')  # 无界面化.
+    chrome_opt.add_argument('--disable-gpu')  # 配合上面的无界面化.
+    chrome_opt.add_argument('--window-size=1366,768')  # 设置窗口大小, 窗口大小会有影响.
+    chrome_opt.add_argument("--no-sandbox")
+    Driver = webdriver.Chrome(options=chrome_opt)
+    #Driver = webdriver.Chrome()
     Driver.get('https://www.zionladdero.com/register')
     #driver.switch_to.frame('//*[@id="register"]/div/div')
     WebDriverWait(Driver,10).until(EC.element_to_be_clickable((By.ID, 'register')))
@@ -65,7 +71,15 @@ def register(email):
     return ssr
 def register2(email,invite):
     global Driver
-    Driver = webdriver.Chrome()
+
+    chrome_opt = webdriver.ChromeOptions()
+    chrome_opt.add_argument('--headless')  # 无界面化.
+    chrome_opt.add_argument('--disable-gpu')  # 配合上面的无界面化.
+    chrome_opt.add_argument('--window-size=1366,768')  # 设置窗口大小, 窗口大小会有影响.
+    chrome_opt.add_argument("--no-sandbox")
+    Driver = webdriver.Chrome(options=chrome_opt)
+
+    #Driver = webdriver.Chrome()
     Driver.get(invite)
     #driver.switch_to.frame('//*[@id="register"]/div/div')
     time.sleep(2)
