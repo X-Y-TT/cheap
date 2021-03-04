@@ -40,7 +40,6 @@ def get_num(email):
     driver.get(s_url)
     time.sleep(5)
     driver.quit()
-    return True
 
 
 def register(email):
