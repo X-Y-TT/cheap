@@ -23,9 +23,9 @@ def tizi2(invite):
             return jsonify({'code': 404, 'msg': '错误！'})
         else:
             f = open('invite.txt', 'a')
-            f.write(invitecodes)
+            f.write(invite)
             f.close()
-            return jsonify({'code' :200, 'msg': ssr})
+            return jsonify({'code' :200, 'msg': 'ok'})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=5008, debug=True)
