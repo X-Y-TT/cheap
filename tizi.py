@@ -125,7 +125,7 @@ if __name__ == "__main__":
         print('运行第：{}次'.format(str(n)))
         if n%5==0:
             print('等待300S！')
-            with open('log.log','w')as f:
+            with open('log1.log','w')as f:
                 f.write('')
         else:
             with open('invite.txt','r') as f:
