@@ -11,10 +11,7 @@ def cheap1():
 @app.route("/newtizi",methods=["GET"])
 def tizi1():
     ssr=tizi.main()
-    if ssr:
-        return jsonify({'code' :200, 'msg': ssr})
-    else:
-        return jsonify({'code': 404, 'msg': '错误！'})
+    return ssr
 @app.route("/tizi/<invite>",methods=["GET"])
 def tizi2(invite):
     invite = 'https://www.zionladdero.com/register/{}'.format(invite)
