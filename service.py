@@ -14,6 +14,11 @@ def tizi1():
     ssr=tizi.main()
     return ssr
 '''
+@app.route("/newlog",methods=["GET"])
+def tizi1():
+    with open('log.log','r')as f:
+        f=f.read()
+    return f
 @app.route("/tizi/<invite>",methods=["GET"])
 def tizi2(invite):
     with open("invite.txt", "r") as f:
