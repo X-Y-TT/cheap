@@ -16,7 +16,7 @@ def tizi1():
 '''
 @app.route("/newlog",methods=["GET"])
 def tizi1():
-    with open('log.log','r')as f:
+    with open('log1.log','r')as f:
         f=f.read()
     return f
 @app.route("/tizi/<invite>",methods=["GET"])
