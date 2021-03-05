@@ -19,6 +19,11 @@ def tizi1():
     with open('log1.log','r')as f:
         f=f.read()
     return f
+@app.route("/invitecode",methods=["GET"])
+def tiziww():
+    with open('invite.txt','r')as f:
+        f=f.read()
+    return f
 @app.route("/tizi/<invite>",methods=["GET"])
 def tizi2(invite):
     with open("invite.txt", "r") as f:
