@@ -19,10 +19,7 @@ def tizi1():
 def tizi2(invite):
     invite = 'https://www.zionladdero.com/register/{}'.format(invite)
     tizi.main2(invite)
-    if True:
-        return jsonify({'code' :200, 'msg': 'ok'})
-    else:
-        return jsonify({'code': 404, 'msg': '错误！'})
+    return jsonify({'code' :200, 'msg': 'ok'})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=5008, debug=True)
