@@ -121,3 +121,4 @@ if __name__ == "__main__":
             with open('invite.txt','r') as f:
                 invite=random.choice(f.readlines()).replace('\n','')
             main2(invite)
+            time.sleep(120)
