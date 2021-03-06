@@ -29,9 +29,9 @@ jobs:
         with:
            python-version: 3.7
       - name: 'Install requirements'
-        run: pip install -r ./Spider/requirements.txt
+        run: pip3.7 install -r ./Spider/requirements.txt
       - name: 'Working'
         run: |
           sudo cp -p ./chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
-          python ./Spider/tizi.py
+          python3.7 ./Spider/tizi.py
