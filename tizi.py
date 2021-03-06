@@ -118,18 +118,8 @@ def main2(invite):
     time.sleep(5)
     get_num(email)
     return True
-if __name__ == "__main__":
-    n=0
-    while True:
-        n+=1
-        print('运行第：{}次'.format(str(n)))
-        if n%5==0:
-            print('等待300S！')
-            with open('log1.log','w')as f:
-                f.write('')
-        else:
-            with open('invite.txt','r') as f:
-                invite=random.choice(f.readlines()).replace('\n','')
-            print(invite)
-            main2(invite)
-            time.sleep(120)
+if __name__ == "__main__"：
+    with open('invite.txt','r') as f:
+        invite=random.choice(f.readlines()).replace('\n','')
+        print(invite)
+        main2(invite)
