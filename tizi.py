@@ -118,7 +118,7 @@ def main2(invite):
     time.sleep(5)
     get_num(email)
     return True
-if __name__ == "__main__"：
+if __name__ == "__main__":
     with open('invite.txt','r') as f:
         invite=random.choice(f.readlines()).replace('\n','')
         print(invite)
